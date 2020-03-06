@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div class="row">
+        <div class="col-sm-3">
+            <img src="{{ asset('img/article/' ~ article.photo) }}" class="img-fluid" alt="">
+        </div>
+        <div class="col-sm-9">
+            <h3>{{ article.title }}</h3>
+            <hr>
+            <p>{{ article.text }}</p>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,19 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div class="row">
+        <div class="col">
+            <h1>Articles</h1>
+        </div>
+    </div>
+    <div class="row">
+        {% for article in results %}
+            <div class="col-sm-3">
+                <img src="{{ asset('img/article/' ~ article.photo) }}" class="img-fluid" alt="">
+                <h4>{{ article.title }}</h4>
+                <p>{{ article.photo }}</p>
+            </div>
+        {% endfor %}
+    </div>
+
+{% endblock %}
